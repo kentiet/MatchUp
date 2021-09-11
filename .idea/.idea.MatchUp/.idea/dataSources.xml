@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="SQLite - matchup.db" uuid="4e8a4eeb-4e67-4dc7-965e-b069875ba548">
+    <data-source source="LOCAL" name="SQLite - matchup.db" uuid="f373b00c-7b11-4b93-8cd7-de0627b162a6">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
