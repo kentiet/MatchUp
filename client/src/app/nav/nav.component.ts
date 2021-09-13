@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
 import { User } from '../_models/User';
 import { AccountService } from '../_services/account.service';
@@ -13,7 +15,7 @@ export class NavComponent implements OnInit {
 
   loggedIn: boolean = false;
 
-  constructor(public accountService: AccountService) {
+  constructor(public accountService: AccountService, private router: Router, private toaster: ToastrService) {
 
   }
 
@@ -23,14 +25,16 @@ export class NavComponent implements OnInit {
 
   login() {
     this.accountService.login(this.model).subscribe(res => {
-      console.log(res);
+      this.router.navigateByUrl('/members')
     }, error => {
       console.log(error)
+      this.toaster.error(error.error)
     })
   }
 
   logout() {
     this.accountService.logout();
+    this.router.navigateByUrl('/')
   }
 
 
